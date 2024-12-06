@@ -26,7 +26,7 @@ export default function CreateProduct({fetchData}) {
     console.log('Token', token);
     console.log(fetchData);
 
-    fetch(`${process.env.REACT_APP_API_BASE_URL}/products/`, {
+    fetch(`https://csp2-ecommerce-api-server.onrender.com/products/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

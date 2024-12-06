@@ -46,7 +46,7 @@ export default function Register() {
 
     console.log("this:", process.env.REACT_APP_API_BASE_URL);
 
-    fetch(`${process.env.REACT_APP_API_BASE_URL}/users/register`, {
+    fetch(`https://csp2-ecommerce-api-server.onrender.com/users/register`, {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",

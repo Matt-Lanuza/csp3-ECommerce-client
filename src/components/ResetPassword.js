@@ -15,7 +15,7 @@ export default function UpdateProfile() {
       return;
     }
 
-    fetch(`${process.env.REACT_APP_API_BASE_URL}/users/update-password`, {
+    fetch(`https://csp2-ecommerce-api-server.onrender.com/users/update-password`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

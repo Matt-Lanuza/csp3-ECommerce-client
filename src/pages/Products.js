@@ -8,7 +8,7 @@ export default function Products() {
   const [products, setProducts] = useState([]);
 
   const fetchData = () => {
-    let fetchUrl = user.isAdmin === true ?`${process.env.REACT_APP_API_BASE_URL}/products/all` : `${process.env.REACT_APP_API_BASE_URL}/products/active` 
+    let fetchUrl = user.isAdmin === true ?`https://csp2-ecommerce-api-server.onrender.com/products/all` : `https://csp2-ecommerce-api-server.onrender.com/products/active` 
     fetch(fetchUrl, {
       headers: {
         Authorization: `Bearer ${ localStorage.getItem('token')}`

@@ -15,7 +15,7 @@ export default function ProductDetailsPage() {
   
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_BASE_URL}/products/${id}`, {
+    fetch(`https://csp2-ecommerce-api-server.onrender.com/products/${id}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ export default function ProductDetailsPage() {
     const subtotal = product.price * quantity;
 
 
-  fetch(`${process.env.REACT_APP_API_BASE_URL}/cart/add-to-cart`, {
+  fetch(`https://csp2-ecommerce-api-server.onrender.com/cart/add-to-cart`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
