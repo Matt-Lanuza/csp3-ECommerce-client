@@ -1,0 +1,378 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+body {
+  background: linear-gradient(to right, #d0c4e2, #7db9e8); 
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.goal-heading {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.circular-card {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circular-image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.circular-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.circular-card:hover {
+  transform: scale(1.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Brand Logo Styling */
+.logo-brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  background-image: url("https://www.shutterstock.com/image-vector/dark-black-abstract-flat-urban-600nw-2016831290.jpg");
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 767.98px) {
+  .logo-brand span.d-none {
+    display: none !important;
+  }
+
+  .logo-brand span.d-md-none {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo-brand span.d-md-none {
+    display: none !important;
+  }
+
+  .logo-brand span.d-md-inline {
+    display: inline-block !important;
+  }
+}
+
+
+/* User Name on Home Page */
+.user-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  text-align: center;
+  color: #00675b; /* Add color for visual interest */
+  margin-bottom: 2rem;
+}
+
+
+/*Highlight card*/
+.cardHighlight {
+  background-color: rgba(255, 255, 255, 0.6); /* Frosted glass effect */
+  border: none;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+/*Featured cards*/
+.featured-card {
+  max-width: 250px; 
+  margin: 0 auto;
+}
+
+
+.product-card {
+  margin-bottom: 1rem;
+  height: 500px;
+  border-radius: 20px;
+  border: 2px solid #2c3e50;
+}
+
+/* Product Card Hover Effect */
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Title Styling */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Card Body Styling */
+.card-body {
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Button Styling */
+.card-body .btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.card-img {
+  max-height: 250px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .card-img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-img {
+    
+  }
+}
+
+
+/*Product details card*/
+.card-lg {
+  display: flex;
+  justify-content: center; 
+  max-width: 100%; 
+  width: 1000px;  
+  margin: 0 auto;             
+}
+
+.card-body {
+  padding: 2rem; 
+}
+
+.products-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/*Quick Links design*/
+
+.quick-links {
+  background-color: #d6e4ff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.link-item {
+  margin-bottom: 30px;
+}
+
+.link-item h3 {
+  font-size: 1.75rem;
+  color: #54a3ab;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.link-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 768px) {
+  .quick-links {
+    padding: 20px;
+  }
+
+  .link-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .link-item p {
+    font-size: 0.95rem;
+  }
+}
+
+/*Highlights*/
+.highlights-title {
+  color: #1a1f71;
+}
+
+/*Admin order title*/
+.admin-order-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/*Admin dashboard title*/
+.admin-dashboard-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.admin-dashboard {
+  background-color: #d6e4ff;
+  border: 2px solid #2c3e50; 
+  color: #333;
+  width: 94%;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%
+}
+
+/*Cart*/
+.cart-table {
+  background-color: #d6e4ff;
+  border: 2px solid #2c3e50;
+  color: #333;
+  border-radius: 10px;
+}
+
+.cart-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+
+
+/*Order*/
+.admin-order-table {
+  background-color: #d6e4ff;
+  border: 2px solid #2c3e50;
+  color: #333;
+  border-radius: 10px;
+}
+
+.user-order-table {
+  background-color: #d6e4ff;
+  border: 2px solid #2c3e50;
+  color: #333;
+  border-radius: 10px;
+}
+
+.user-order-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+
+/*Profile page*/
+
+/* Profile Name */
+.profile-name {
+  font-family: Verdana, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-card {
+  background-color: #d6e4ff;
+  border: none;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+.update-profile-card {
+  background-color: #e6e6fa;
+  border: none;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+.reset-password-card {
+  background-color: #e6e6fa;
+  border: none;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+.promote-user-to-admin {
+  background-color: #e6e6fa;
+  border: none;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+
