@@ -22,7 +22,7 @@ const SetUserAsAdmin = () => {
     console.log(currentUser);
     console.log(`${process.env.REACT_APP_API_BASE_URL}/users/${selectedUser}set-as-admin`  );
 
-    fetch(`https://csp2-ecommerce-api-server.onrender.com/users/all-users`, {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/users/all-users`, {
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -49,7 +49,7 @@ const SetUserAsAdmin = () => {
     setIsLoading(true);
     setErrorMessage('');
 
-    fetch(`https://csp2-ecommerce-api-server.onrender.com/users/${selectedUser}/set-as-admin`, {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/users/${selectedUser}/set-as-admin`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

@@ -9,7 +9,7 @@ export default function ProductCard({ productProp, isAdmin }) {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`https://csp2-ecommerce-api-server.onrender.com/products/${_id}`); 
+        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/products/${_id}`); 
         if (response.ok) {
           const data = await response.json();
           setProduct(data);

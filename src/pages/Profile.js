@@ -15,7 +15,7 @@ export default function Profile() {
   
 
   useEffect(() => {
-    fetch(`https://csp2-ecommerce-api-server.onrender.com/users/details`, {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/users/details`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
       },

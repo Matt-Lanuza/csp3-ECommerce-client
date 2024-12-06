@@ -23,7 +23,7 @@ export default function UserOrderHistoryPage() {
     // Fetch the user's orders from the API
     const fetchOrders = async () => {
       try {
-        const response = await fetch(`https://csp2-ecommerce-api-server.onrender.com/orders/my-orders`, {
+        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/orders/my-orders`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

@@ -14,7 +14,7 @@ export default function ClearAllCartButton({ clearAllCart }) {
     setLoading(true);
     setError('');
     
-    fetch(`https://csp2-ecommerce-api-server.onrender.com/cart/clear-cart`, {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/cart/clear-cart`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

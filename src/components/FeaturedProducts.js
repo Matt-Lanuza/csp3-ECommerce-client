@@ -8,7 +8,7 @@ const FeaturedProducts = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`https://csp2-ecommerce-api-server.onrender.com/products/active`)
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/products/active`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch products');

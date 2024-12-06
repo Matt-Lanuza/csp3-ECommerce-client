@@ -33,7 +33,7 @@ export default function UpdateProduct({product, fetchData}){
 
     
 
-    fetch(`https://csp2-ecommerce-api-server.onrender.com/products/${productId}/update`, {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/products/${productId}/update`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

@@ -13,7 +13,7 @@ export default function RemoveFromCartButton({ productId, removeFromCart }) {
   const handleRemove = () => {
     setShowModal(false);
 
-    fetch(`https://csp2-ecommerce-api-server.onrender.com/cart/${productId}/remove-from-cart`, {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/cart/${productId}/remove-from-cart`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

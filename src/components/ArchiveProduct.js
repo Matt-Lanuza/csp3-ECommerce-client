@@ -11,7 +11,7 @@ export default function ArchiveProduct({ product, isActive, fetchData }) {
 
   // Archive product function
   const archiveToggle = () => {
-    fetch(`https://csp2-ecommerce-api-server.onrender.com/products/${productId}/archive`, {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/products/${productId}/archive`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ export default function ArchiveProduct({ product, isActive, fetchData }) {
 
   // Activate product function
   const activateToggle = () => {
-    fetch(`https://csp2-ecommerce-api-server.onrender.com/products/${productId}/activate`, {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/products/${productId}/activate`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

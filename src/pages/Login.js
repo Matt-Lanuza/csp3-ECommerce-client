@@ -16,7 +16,7 @@ export default function Login() {
 
 
 
-    fetch(`https://csp2-ecommerce-api-server.onrender.com/users/login`, {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/users/login`, {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
@@ -43,7 +43,7 @@ export default function Login() {
   }
 
   const retrieveUserDetails = (token) => {
-    fetch(`https://csp2-ecommerce-api-server.onrender.com/users/details`, {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/users/details`, {
       headers: {
         Authorization: `Bearer ${token}`
       }

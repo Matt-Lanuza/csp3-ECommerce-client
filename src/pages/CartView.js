@@ -17,7 +17,7 @@ export default function CartView() {
 
   useEffect(() => {
     const fetchCartItems = () => {
-      fetch(`https://csp2-ecommerce-api-server.onrender.com/cart/get-cart`, {
+      fetch(`${process.env.REACT_APP_API_BASE_URL}/cart/get-cart`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ export default function CartView() {
         .then((data) => {
           const cartItems = data.cart.cartItems || [];
           const updatedCartItemsPromises = cartItems.map((item) =>
-            fetch(`https://csp2-ecommerce-api-server.onrender.com/products/${item.productId}`, {
+            fetch(`${process.env.REACT_APP_API_BASE_URL}/products/${item.productId}`, {
               method: 'GET',
               headers: {
                 'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ export default function CartView() {
 
   // Update cart item quantity
   const updateQuantity = (productId, newQuantity) => {
-    fetch(`https://csp2-ecommerce-api-server.onrender.com/cart/update-cart-quantity`, {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/cart/update-cart-quantity`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ export default function CartView() {
       return;
     }
 
-    fetch(`https://csp2-ecommerce-api-server.onrender.com/orders/checkout`, {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/orders/checkout`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
